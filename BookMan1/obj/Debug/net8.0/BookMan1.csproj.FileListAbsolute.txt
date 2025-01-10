@@ -1,0 +1,14 @@
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\bin\Debug\net8.0\BookMan1.exe
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\bin\Debug\net8.0\BookMan1.deps.json
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\bin\Debug\net8.0\BookMan1.runtimeconfig.json
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\bin\Debug\net8.0\BookMan1.dll
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\bin\Debug\net8.0\BookMan1.pdb
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\obj\Debug\net8.0\BookMan1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\obj\Debug\net8.0\BookMan1.AssemblyInfoInputs.cache
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\obj\Debug\net8.0\BookMan1.AssemblyInfo.cs
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\obj\Debug\net8.0\BookMan1.csproj.CoreCompileInputs.cache
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\obj\Debug\net8.0\BookMan1.dll
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\obj\Debug\net8.0\refint\BookMan1.dll
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\obj\Debug\net8.0\BookMan1.pdb
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\obj\Debug\net8.0\BookMan1.genruntimeconfig.cache
+C:\Users\Home PC\source\repos\BookMan1\BookMan1\obj\Debug\net8.0\ref\BookMan1.dll
