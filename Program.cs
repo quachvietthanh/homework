@@ -4,94 +4,75 @@ class Program
 {
     static void Main()
     {
-        Console.Write("Enter the desired accuracy (epsilon): ");
-        double epsilon = double.Parse(Console.ReadLine());
+        Console.Write("Enter an integer n: ");
+        int n = int.Parse(Console.ReadLine());
 
-        Console.WriteLine($"Approximated value of π: {CalculatePi(epsilon) * 4:F10}");
-
-        Console.Write("Enter x (in radians) for sin(x) and cos(x): ");
-        double x = double.Parse(Console.ReadLine());
-        Console.WriteLine($"Approximated value of sin(x): {CalculateSin(x, epsilon):F10}");
-        Console.WriteLine($"Approximated value of cos(x): {CalculateCos(x, epsilon):F10}");
-
-        Console.Write("Enter x for ln(1+x): ");
-        double lnX = double.Parse(Console.ReadLine());
-        Console.WriteLine($"Approximated value of ln(1+x): {CalculateLn(lnX, epsilon):F10}");
+        Console.WriteLine($"S1 = {CalculateS1(n):F5}");
+        Console.WriteLine($"S2 = {CalculateS2(n):F5}");
+        Console.WriteLine($"S5 = {CalculateS5(n):F5}");
+        Console.WriteLine($"S6 = {CalculateS6(n):F5}");
+        Console.WriteLine($"S7 = {CalculateS7(n):F5}");
     }
 
-    static double CalculatePi(double epsilon)
-    {
-        double sum = 0;
-        int n = 0;
-
-        while (true)
-        {
-            double term = Math.Pow(-1, n) / (2 * n + 1);
-            if (Math.Abs(term) < epsilon)
-                break;
-
-            sum += term;
-            n++;
-        }
-
-        return sum;
-    }
-
-    static double CalculateSin(double x, double epsilon)
-    {
-        double sum = 0;
-        int n = 0;
-
-        while (true)
-        {
-            double term = Math.Pow(-1, n) * Math.Pow(x, 2 * n + 1) / Factorial(2 * n + 1);
-            if (Math.Abs(term) < epsilon)
-                break;
-
-            sum += term;
-            n++;
-        }
-
-        return sum;
-    }
-
-    static double CalculateCos(double x, double epsilon)
+    static double CalculateS1(int n)
     {
         double sum = 1;
-        int n = 1;
+        double denominator = 0;
 
-        while (true)
+        for (int i = 1; i <= n; i++)
         {
-            double term = Math.Pow(-1, n) * Math.Pow(x, 2 * n) / Factorial(2 * n);
-            if (Math.Abs(term) < epsilon)
-                break;
-
-            sum += term;
-            n++;
+            denominator += i * i;
+            sum -= Math.Pow(-1, i - 1) / denominator;
         }
 
         return sum;
     }
 
-    static double CalculateLn(double x, double epsilon)
+    static double CalculateS2(int n)
     {
-        if (x <= -1)
+        double sum = 1;
+
+        for (int i = 1; i <= n; i++)
         {
-            Console.WriteLine("ln(1+x) is undefined for x <= -1.");
-            return double.NaN;
+            sum += Math.Pow(-2, i) / Factorial(i);
         }
 
+        return sum;
+    }
+
+    static double CalculateS5(int n)
+    {
         double sum = 0;
-        int n = 1;
 
-        while (true)
+        for (int i = 1; i <= n; i++)
         {
-            double term = Math.Pow(-1, n - 1) * Math.Pow(x, n) / n;
-            if (Math.Abs(term) < epsilon)
-                break;
+            sum += Math.Pow(-1, i + 1) / (2 * i);
+        }
 
-            sum += term;
-            n++;
+        return sum;
+    }
+
+    static double CalculateS6(int n)
+    {
+        double sum = 1;
+        double denominator = 0;
+
+        for (int i = 1; i <= n; i++)
+        {
+            denominator += i;
+            sum += Math.Pow(-1, i) / denominator;
+        }
+
+        return sum;
+    }
+
+    static double CalculateS7(int n)
+    {
+        double sum = 1;
+
+        for (int i = 1; i <= n; i++)
+        {
+            sum += Math.Pow(2, i) / Factorial(i);
         }
 
         return sum;
@@ -109,3 +90,6 @@ class Program
         return result;
     }
 }
+
+
+
